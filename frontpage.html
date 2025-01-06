@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Nest</title>
+    <link rel="icon" href="frontend/logo1.PNG">
+    <link rel="stylesheet" href="styleall.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+
+<!-- Background Video & Header -->
+
+    <div class="banner">
+        <video src="Travel.mp4" type="video/mp4" autoplay muted loop></video>
+    
+    <!-- Header -->
+
+    <div class="content" id="home"> 
+        <nav>
+            <img src="logo1.PNG" class="logo" alt="Logo" title="Travel Nest">
+            
+            <ul class="navbar">
+                <li>
+                    <a href="frontpage.html">Home</a>
+                    <a href="locations.html">Explore</a>
+                    <a href="packages.html">Services</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contacts.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+ 
+        <div class="title">
+            <h1>Dream -> Discover -> Travel</h1>
+            <p>Journey of thoushand miles start with single click </p>
+            <a href="register.html" class="button">Book Now!</a>
+        </div>
+        </div>
+    </div>
+
+<!-- Services -->
+
+<section class="container">
+    <div class="text">
+        <h2>We have the best services available for you!</h2>
+    </div>
+    <div class="rowitems">
+        <div class="container-box">
+        <div class="container-image">
+           <img src="https://tse2.mm.bing.net/th?id=OIP.99YYBmfA4P7vHAi9HwLGEwHaFj&pid=Api&P=0&h=180" alt="Flight Services">
+        </div>
+            <h4>Flight Services</h4>
+            <p>Arrival and Departure</p>
+        </div>
+    
+        <div class="container-box">
+        <div class="container-image">
+           <img src="https://tse1.mm.bing.net/th?id=OIP.XOWfCCtoy1PJW9yXdc5XowHaHa&pid=Api&P=0&h=180" alt="Food Services">
+        </div>
+            <h4>Food Services</h4>
+            <p>Catering</p>
+        </div>
+
+        <div class="container-box">
+        <div class="container-image">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.mq6r0JMZP8oLsS9Tcq7LGgHaE9&pid=Api&P=0&h=180" alt="Travel Services">
+        </div>
+            <h4>Travel Services</h4>
+            <p>Pick-up/drop</p>
+        </div>
+
+        <div class="container-box">
+        <div class="container-image">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.TeoMuTwEAzd-7c6H3RqwLgHaE8&pid=Api&P=0&h=180" alt="Hotel Services">
+        </div>
+            <h4>Hotel Services</h4>
+            <p>Check-in/out</p>
+        </div>
+
+    </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Footer -->
+
+<section class="footer">
+    <div class="foot">
+        <div class="footer-content">
+            
+            <div class="footlinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="frontend/register.html">Register</a></li>
+                    
+                    <li><a href="frontend/about.html">About Us</a></li>
+                    <li><a href="frontend/contacts.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Connect</h4>
+                <div class="social">
+                    <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/in/rakshitha-n-d-473541272" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-wordpress' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="end">
+        <p>Copyright © 2024 TravelNest Travels All Rights Reserved.<br>Website developed by:Rakshitha ND</p>
+    </div>
+</section>
+<div id="responseMessage"></div>
+<ul id="userList"></ul>
+
+
+
+ 
+</body>
+<script>
+    // Fetch data from the backend API running on port 5000
+    fetch('http://localhost:5000/api/data')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        // You can display this data on the frontend page, like in an HTML element
+      })
+      .catch(error => console.error('Error:', error));
+  </script>
+  
+</html>
